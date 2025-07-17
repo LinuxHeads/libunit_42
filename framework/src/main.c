@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
+/*   By: malsharq <malsharq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 18:58:15 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/17 20:15:27 by abdsalah         ###   ########.fr       */
+/*   Updated: 2025/07/17 21:32:00 by malsharq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int f(void)
 {
-    printf("hi\n");
-
+    raise(SIGBUS);
+    // printf("%c",k[3]);
     return (1);
 }
 
@@ -24,10 +24,10 @@ int main(void)
     t_unit_test *list = NULL;
 
     load_test(&list, "1", f);
-    load_test(&list, "2", f);
-    load_test(&list, "3", f);
-    load_test(&list, "4", f);
-    load_test(&list, "5", f);
+    // load_test(&list, "2", f);
+    // load_test(&list, "3", f);
+    // load_test(&list, "4", f);
+    // load_test(&list, "5", f);
 
     printf("list head %s\n", list->test_name);
     t_unit_test *head = list;
@@ -36,7 +36,7 @@ int main(void)
         list = list->next;
     }
     printf("list tail %s\n", list->test_name);
-
+    main_launcher(head);
     free_list(head);
     return (0);
 }

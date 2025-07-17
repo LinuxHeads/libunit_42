@@ -1,21 +1,23 @@
 CC = cc
 CFLAGS = -Wall -Werror -Wextra -Iinclude
+LINK = -L./libft -lft
 NAME = libunit.a
 
 SRC_DIR = src
 OBJS_DIR = objs
 
-SRC = loader.c
+SRC = loader.c launcher.c
 
 SRCS = $(addprefix $(SRC_DIR)/, $(SRC))
 
 OBJS = $(patsubst $(SRC_DIR)/%.c, $(OBJS_DIR)/%.o, $(SRCS))
 
-all: $(NAME)
+all: libft $(NAME)
 
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
-
+libft:
+	make -C ../libft
 $(OBJS_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJS_DIR)
 	@mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) -c $< -o $@
