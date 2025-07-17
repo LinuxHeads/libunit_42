@@ -6,7 +6,7 @@
 /*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 18:43:09 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/17 20:05:28 by abdsalah         ###   ########.fr       */
+/*   Updated: 2025/07/17 20:14:36 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,18 +37,18 @@ static t_unit_test *add_node(t_unit_test **test_list, const char *test_name, int
     return (new_node);
 }
 
-static void free_list(t_unit_test **list)
+void free_list(t_unit_test *list)
 {
     t_unit_test *cur;
     t_unit_test *tmp;
     
-    if (!list || !*list)
+    if (!list)
     {
         return ;
     }
     
-    cur = *list;
-    tmp = *list;
+    cur = list;
+    tmp = list;     
     while (cur)
     {
         tmp = cur->next;
@@ -61,7 +61,8 @@ void load_test(t_unit_test **test_list, const char *test_name, int (*f)(void))
 {
     if (add_node(test_list, test_name, f) == NULL)
     {
-        free_list(test_list);
+        if (test_list)
+            free_list(*test_list);
         exit(1);
     }
 }

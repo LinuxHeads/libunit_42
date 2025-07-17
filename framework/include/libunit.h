@@ -6,7 +6,7 @@
 /*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 18:42:11 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/17 18:59:48 by abdsalah         ###   ########.fr       */
+/*   Updated: 2025/07/17 20:13:05 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ typedef struct s_unit_test
     struct s_unit_test  *next;
 } t_unit_test;
 
-void load_test(t_unit_test **test_list, const char *test_name, int (*f)(void));
+void    free_list(t_unit_test *list);
+void    load_test(t_unit_test **test_list, const char *test_name, int (*f)(void));
 
 #endif 
