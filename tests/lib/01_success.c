@@ -6,13 +6,13 @@
 /*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 20:34:18 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/17 20:53:18 by abdsalah         ###   ########.fr       */
+/*   Updated: 2025/07/18 00:38:17 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../lib_tests.h"
 
-int test_success(void)
+int	test_success(void)
 {
-        
+	return (0);
 }

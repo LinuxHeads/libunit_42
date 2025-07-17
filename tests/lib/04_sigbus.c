@@ -6,13 +6,14 @@
 /*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 20:48:07 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/17 20:49:15 by abdsalah         ###   ########.fr       */
+/*   Updated: 2025/07/18 01:11:36 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../lib_tests.h"
 
-int test_sigbus(void)
+int	test_sigbus(void)
 {
-    
+	raise(SIGBUS);
+	return (0);
 }

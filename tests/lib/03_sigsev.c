@@ -6,13 +6,17 @@
 /*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 20:48:03 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/17 20:48:47 by abdsalah         ###   ########.fr       */
+/*   Updated: 2025/07/18 00:38:49 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../lib_tests.h"
 
-int test_segfault(void)
+int	test_segfault(void)
 {
-    
+	char	*ptr;
+
+	ptr = NULL;
+	*ptr = 'a';
+	return (0);
 }
