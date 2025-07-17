@@ -6,7 +6,7 @@
 /*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 20:29:29 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/17 20:51:08 by abdsalah         ###   ########.fr       */
+/*   Updated: 2025/07/18 00:39:09 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,10 @@
 
 # include "../framework/include/libunit.h"
 
-int test_success(void);
-int test_fail(void);
-int test_segfault(void);
-int test_sigbus(void);
-int launcher_lib(void);
+int	test_success(void);
+int	test_fail(void);
+int	test_segfault(void);
+int	test_sigbus(void);
+int	launcher_lib(void);
 
 #endif

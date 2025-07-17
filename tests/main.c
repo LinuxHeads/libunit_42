@@ -12,9 +12,8 @@
 
 #include "lib_tests.h"
 
-int main(void)
+int	main(void)
 {
-    launcher_lib();    
-    return (0);
+	launcher_lib();
+	return (0);
 }
-
