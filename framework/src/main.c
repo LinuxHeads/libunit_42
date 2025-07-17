@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malsharq <malsharq@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 18:58:15 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/17 21:32:00 by malsharq         ###   ########.fr       */
+/*   Updated: 2025/07/18 01:16:01 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,10 +24,10 @@ int main(void)
     t_unit_test *list = NULL;
 
     load_test(&list, "1", f);
-    // load_test(&list, "2", f);
-    // load_test(&list, "3", f);
-    // load_test(&list, "4", f);
-    // load_test(&list, "5", f);
+    load_test(&list, "2", f);
+    load_test(&list, "3", f);
+    load_test(&list, "4", f);
+    load_test(&list, "5", f);
 
     printf("list head %s\n", list->test_name);
     t_unit_test *head = list;

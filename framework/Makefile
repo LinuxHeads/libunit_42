@@ -1,6 +1,6 @@
 CC = cc
-CFLAGS = -Wall -Werror -Wextra -Iinclude
-LINK = -L./libft -lft
+CFLAGS = -Wall -Werror -Wextra -Iinclude -g3
+# LINK = -L./libft -lft
 NAME = libunit.a
 
 SRC_DIR = src
@@ -33,4 +33,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean fclean re libft
