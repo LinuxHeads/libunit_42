@@ -3,3 +3,4 @@
 *.log
 *.out
 .vscode
+lib_tests

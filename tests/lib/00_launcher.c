@@ -6,11 +6,11 @@
 /*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 20:31:27 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/18 01:27:04 by abdsalah         ###   ########.fr       */
+/*   Updated: 2025/07/18 09:40:24 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "lib_tests.h"
+#include "../lib_tests.h"
 
 int	launcher_lib(void)
 {
