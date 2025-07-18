@@ -1,21 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   01_success.c                                       :+:      :+:    :+:   */
+/*   06_sigfpe.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/17 20:34:18 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/18 19:59:01 by abdsalah         ###   ########.fr       */
+/*   Created: 2025/07/18 19:35:41 by abdsalah          #+#    #+#             */
+/*   Updated: 2025/07/18 19:57:05 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../lib_tests.h"
 
-int	test_success(void)
+int	test_sigfpe(void)
 {
-	if (ft_isdigit('1'))
-		return (0);
-	else
-		return (-1);
+	int	a;
+	int	b;
+	int	result;
+
+	a = 1;
+	b = 0;
+	result = a / b;
+	(void)result;
+	return (0);
 }

@@ -11,7 +11,12 @@ SRCS = main.c \
        lib/01_success.c \
        lib/02_fail.c \
        lib/03_sigsev.c \
-       lib/04_sigbus.c
+       lib/04_sigbus.c \
+	   lib/05_timeout.c \
+	   lib/06_sigfpe.c \
+	   lib/07_sigabrt.c \
+	   lib/08_sigill.c \
+	   lib/09_sigpipe.c
 
 OBJS = $(SRCS:.c=.o)
 
