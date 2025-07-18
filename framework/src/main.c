@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
+/*   By: malak <malak@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 18:58:15 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/18 01:16:01 by abdsalah         ###   ########.fr       */
+/*   Updated: 2025/07/18 17:13:28 by malak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int f(void)
 {
-    raise(SIGBUS);
+    // raise(SIGBUS);
     // printf("%c",k[3]);
     return (1);
 }

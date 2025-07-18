@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   loader.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
+/*   By: malak <malak@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 18:43:09 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/18 01:26:32 by abdsalah         ###   ########.fr       */
+/*   Updated: 2025/07/18 17:14:48 by malak            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static t_unit_test	*add_node(t_unit_test **test_list, const char *test_name,
 	{
 		return (NULL);
 	}
-	*new_node = (t_unit_test){.verbose = 0, .test_name = test_name, .f = f,
+	*new_node = (t_unit_test){.verbose = 1, .test_name = test_name, .f = f,
 		.next = NULL};
 	if (!test_list || !*test_list)
 	{
