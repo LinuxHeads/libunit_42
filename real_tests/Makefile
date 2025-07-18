@@ -4,7 +4,7 @@ CFLAGS = -Wall -Wextra -Werror
 LIBFT_DIR   = ../libft
 LIBUNIT_DIR = ../framework
 
-NAME = lib_tests
+NAME =  project_tests
 
 SRCS = main.c \
        lib/00_launcher.c \
@@ -20,6 +20,9 @@ INCLUDES = -I$(LIBFT_DIR)/includes -I$(LIBUNIT_DIR)/include
 LIBS = $(LIBUNIT_DIR)/libunit.a $(LIBFT_DIR)/libft.a
 
 all: $(NAME)
+
+test: all
+	@./$(NAME)
 
 $(NAME): $(OBJS)
 	@make -C $(LIBFT_DIR)
@@ -37,8 +40,5 @@ fclean: clean
 	@make fclean -C $(LIBUNIT_DIR)
 
 re: fclean all
-
-test: all
-	@./$(NAME)
 
 .PHONY: all clean fclean re test

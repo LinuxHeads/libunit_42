@@ -4,3 +4,4 @@
 *.out
 .vscode
 lib_tests
+project_tests

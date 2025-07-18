@@ -6,7 +6,7 @@
 /*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 18:42:11 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/18 00:40:07 by abdsalah         ###   ########.fr       */
+/*   Updated: 2025/07/18 11:14:12 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 # include "../../libft/includes/ft_printf.h"
 # include "../../libft/includes/get_next_line.h"
+# include "../../libft/includes/libft.h"
 # include <signal.h>
-# include <stdio.h>
 # include <stdlib.h>
 # include <sys/wait.h>
 
