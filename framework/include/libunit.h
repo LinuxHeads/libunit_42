@@ -6,7 +6,7 @@
 /*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 18:42:11 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/18 11:14:12 by abdsalah         ###   ########.fr       */
+/*   Updated: 2025/07/18 20:24:06 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,16 +20,24 @@
 # include <stdlib.h>
 # include <sys/wait.h>
 
+# define TIMEOUT 5
+# define YEL "\033[0;33m"
+# define RED "\033[0;31m"
+# define GRN "\033[0;32m"
+# define WHT "\033[0;37m"
+
 typedef struct s_unit_test
 {
-	int					verbose;
 	int					(*f)(void);
 	const char			*test_name;
+	const char			*function_name;
 	struct s_unit_test	*next;
 }						t_unit_test;
 
 void					free_list(t_unit_test *list);
 void					load_test(t_unit_test **test_list,
+							const char *function_name,
 							const char *test_name, int (*f)(void));
-void					main_launcher(t_unit_test *list);
+int						launch_tests(t_unit_test *list);
+
 #endif
