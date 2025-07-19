@@ -6,13 +6,13 @@
 /*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 19:02:26 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/19 11:27:54 by abdsalah         ###   ########.fr       */
+/*   Updated: 2025/07/19 11:34:19 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libunit.h"
 
-static void	child_process(t_unit_test *test_node)
+static void	child_process(t_unit_test *test_node, t_unit_test *list)
 {
 	int	devnull;
 	int	ret;
@@ -31,6 +31,7 @@ static void	child_process(t_unit_test *test_node)
 	}
 	alarm(TIMEOUT);
 	ret = test_node->f();
+	free_list(list);
 	exit(ret);
 }
 
@@ -101,7 +102,7 @@ int	launch_tests(t_unit_test *list)
 	{
 		pid = fork();
 		if (pid == 0)
-			child_process(current);
+			child_process(current, list);
 		else
 			parent_process(current, &success_count);
 		current = current->next;
