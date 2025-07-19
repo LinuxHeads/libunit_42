@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   loader.c                                           :+:      :+:    :+:   */
+/*   loader_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 18:43:09 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/19 19:57:06 by abdsalah         ###   ########.fr       */
+/*   Updated: 2025/07/19 19:47:26 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../include/libunit.h"
+#include "../include_bonus/libunit_bonus.h"
 
 static t_unit_test	*add_node(t_unit_test **test_list, const char *test_name,
 		int (*f)(void), int flags)
@@ -27,6 +27,7 @@ static t_unit_test	*add_node(t_unit_test **test_list, const char *test_name,
 	new_node->test_name = test_name;
 	new_node->flags = flags;
 	new_node->next = NULL;
+	new_node->expected_out = NULL;
 	if (!test_list || !*test_list)
 	{
 		*test_list = new_node;
