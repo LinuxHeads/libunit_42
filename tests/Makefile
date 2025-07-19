@@ -44,6 +44,7 @@ fclean: clean
 re: fclean all
 
 test: all
-	@./$(NAME)
+	@./$(NAME) -s $(subst , ,$(SKIP))
+
 
 .PHONY: all clean fclean re test
