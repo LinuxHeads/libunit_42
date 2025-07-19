@@ -6,11 +6,25 @@
 /*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 19:02:26 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/19 22:22:33 by abdsalah         ###   ########.fr       */
+/*   Updated: 2025/07/19 22:53:58 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libunit_bonus.h"
+
+static void	setup_pipe(t_unit_test *list, t_unit_test *current, int pipe_fd[])
+{
+	pipe_fd[0] = -1;
+	pipe_fd[1] = -1;
+	if (current->flags & OUTPUT)
+	{
+		if (pipe(pipe_fd) == -1)
+		{
+			free_list(list);
+			exit(1);
+		}
+	}
+}
 
 static int	exec_tests(t_unit_test *list, const char *function_name,
 		int *total_tests)
@@ -24,15 +38,9 @@ static int	exec_tests(t_unit_test *list, const char *function_name,
 	success_count = 0;
 	while (current)
 	{
-		pipe_fd[0] = -1;
-		pipe_fd[1] = -1;
-		if (current->flags & OUTPUT)
+		if (!current->f)
 		{
-			if (pipe(pipe_fd) == -1)
-			{
-				free_list(list);
-				exit(1);
-			}
+			free_list(list);
 		}
 		pid = fork();
 		if (pid == 0)

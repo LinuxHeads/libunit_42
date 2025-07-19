@@ -6,18 +6,37 @@
 /*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 19:12:00 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/19 22:22:41 by abdsalah         ###   ########.fr       */
+/*   Updated: 2025/07/19 22:53:15 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libunit_bonus.h"
+
+static int	check_output(t_unit_test *current, int *pipe_fd, int *success_count)
+{
+	int		passed;
+
+	passed = 1;
+	if (current->flags & OUTPUT)
+	{
+		close(pipe_fd[1]);
+		if (!compare_output(current->expected_out, pipe_fd[0]))
+			passed = 0;
+	}
+	if (passed)
+		(*success_count)++;
+	if ((current->flags & OUTPUT) && passed == 0)
+	{
+		return (1);
+	}
+	return (0);
+}
 
 void	parent_process(t_unit_test *current, int *success_count,
 		const char *function_name, int *pipe_fd)
 {
 	int		status;
 	char	*status_str;
-	int		passed;
 
 	wait(&status);
 	status_str = get_status(status);
@@ -28,16 +47,7 @@ void	parent_process(t_unit_test *current, int *success_count,
 	}
 	if (WIFEXITED(status) && WEXITSTATUS(status) == 0)
 	{
-		passed = 1;
-		if (current->flags & OUTPUT)
-		{
-			close(pipe_fd[1]);
-			if (!compare_output(current->expected_out, pipe_fd[0]))
-				passed = 0;
-		}
-		if (passed)
-			(*success_count)++;
-		if ((current->flags & OUTPUT) && passed == 0)
+		if (check_output)
 		{
 			free(status_str);
 			status_str = ft_strdup(RED "KO");

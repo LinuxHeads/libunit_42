@@ -6,14 +6,14 @@
 /*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 20:29:29 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/19 22:06:06 by abdsalah         ###   ########.fr       */
+/*   Updated: 2025/07/19 22:54:39 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIB_TESTS_BONUS_H
-# define LIB_TESTS_BONUS_H
+#ifndef LIB_TESTS_H
+# define LIB_TESTS_H
 
-# include "../framework/include_bonus/libunit_bonus.h"
+# include "../framework/include/libunit_bonus.h"
 # include <stdlib.h>
 # include <unistd.h>
 
