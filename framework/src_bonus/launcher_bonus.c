@@ -6,7 +6,7 @@
 /*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 19:02:26 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/19 19:47:07 by abdsalah         ###   ########.fr       */
+/*   Updated: 2025/07/19 21:40:58 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,9 +57,11 @@ int	launch_tests(t_unit_test *list, const char *function_name)
 	}
 	total_tests = 0;
 	success_count = exec_tests(list, function_name, &total_tests);
-	
-	ft_printf(WHT "Total tests: %d," GRN " Success: %d" WHT "," RED " Failures: \
-%d\n", total_tests, success_count, total_tests - success_count);
+	ft_printf(WHT "Total tests: %d," GRN " Success: \
+%d" WHT "," RED " Failures: %d\n",
+		total_tests,
+		success_count,
+		total_tests - success_count);
 	free_list(list);
 	if (success_count == total_tests)
 		return (0);

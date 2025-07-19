@@ -6,7 +6,7 @@
 /*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 20:29:29 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/19 20:13:26 by abdsalah         ###   ########.fr       */
+/*   Updated: 2025/07/19 21:35:34 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,6 @@ int	test_sigfpe(void);
 int	test_sigabrt(void);
 int	test_sigill(void);
 int	test_sigpipe(void);
+int	test_printf(void);
 
 #endif

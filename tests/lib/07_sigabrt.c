@@ -6,11 +6,11 @@
 /*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 19:53:11 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/19 10:32:25 by abdsalah         ###   ########.fr       */
+/*   Updated: 2025/07/19 21:27:18 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../lib_tests.h"
+#include "../lib_tests_bonus.h"
 
 int	test_sigabrt(void)
 {

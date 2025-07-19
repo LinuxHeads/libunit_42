@@ -22,7 +22,7 @@ void	child_process(t_unit_test *test_node, t_unit_test *list, int *pipe_fd)
 		ft_printf("Invalid test function.\n");
 		exit(EXIT_FAILURE);
 	}
-	if (!(test_node->flags & OUTPUT)) 
+	if (!(test_node->flags & OUTPUT))
 	{
 		devnull = open("/dev/null", O_WRONLY);
 		if (devnull == -1)

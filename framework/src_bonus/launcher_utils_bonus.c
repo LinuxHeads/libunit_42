@@ -6,29 +6,31 @@
 /*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 19:07:11 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/19 19:47:23 by abdsalah         ###   ########.fr       */
+/*   Updated: 2025/07/19 21:39:58 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include_bonus/libunit_bonus.h"
 
-int compare_output(const char *out, int fd)
+int	compare_output(const char *out, int fd)
 {
-    int i;
-    char c;
-    ssize_t n;
+	int		i;
+	char	c;
+	ssize_t	n;
 
 	i = 0;
-    while ((n = read(fd, &c, 1)) > 0)
-    {
-        if (out[i++] != c)
-        {
-            close(fd);
-            return (0);
-        }
-    }
-    close(fd);
-    return (out[i] == '\0');
+	n = read(fd, &c, 1);
+	while (n > 0)
+	{
+		if (out[i++] != c)
+		{
+			close(fd);
+			return (0);
+		}
+		n = read(fd, &c, 1);
+	}
+	close(fd);
+	return (out[i] == '\0');
 }
 
 char	*get_status(int status)

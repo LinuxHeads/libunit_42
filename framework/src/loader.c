@@ -6,7 +6,7 @@
 /*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 18:43:09 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/19 19:57:06 by abdsalah         ###   ########.fr       */
+/*   Updated: 2025/07/19 21:37:42 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ t_unit_test	*load_test(t_unit_test **test_list, const char *test_name,
 		int (*f)(void), int flags)
 {
 	t_unit_test	*node;
-	
+
 	node = add_node(test_list, test_name, f, flags);
 	if (node == NULL)
 	{

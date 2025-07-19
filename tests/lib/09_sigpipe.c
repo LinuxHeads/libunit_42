@@ -6,11 +6,11 @@
 /*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 19:54:48 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/18 20:04:49 by abdsalah         ###   ########.fr       */
+/*   Updated: 2025/07/19 21:27:07 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../lib_tests.h"
+#include "../lib_tests_bonus.h"
 
 int	test_sigpipe(void)
 {

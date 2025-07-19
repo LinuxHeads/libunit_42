@@ -65,7 +65,7 @@ t_unit_test	*load_test(t_unit_test **test_list, const char *test_name,
 		int (*f)(void), int flags)
 {
 	t_unit_test	*node;
-	
+
 	node = add_node(test_list, test_name, f, flags);
 	if (node == NULL)
 	{

@@ -42,7 +42,8 @@ int						launch_tests(t_unit_test *list,
 							const char *function_name);
 int						compare_output(const char *out, int fd);
 char					*get_status(int status);
-void					child_process(t_unit_test *test_node, t_unit_test *list);
+void					child_process(t_unit_test *test_node,
+							t_unit_test *list);
 void					parent_process(t_unit_test *current, int *success_count,
 							const char *function_name);
 #endif

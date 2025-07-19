@@ -24,7 +24,8 @@ SRCS_BONUS = main.c \
 			lib/06_sigfpe.c \
 			lib/07_sigabrt.c \
 			lib/08_sigill.c \
-			lib/09_sigpipe.c
+			lib/09_sigpipe.c \
+			lib/10_output.c
 
 
 OBJS_BONUS = $(SRCS_BONUS:.c=.o)
