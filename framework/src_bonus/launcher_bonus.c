@@ -6,7 +6,7 @@
 /*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 19:02:26 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/19 22:53:58 by abdsalah         ###   ########.fr       */
+/*   Updated: 2025/07/19 22:57:05 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,7 @@ static int	exec_tests(t_unit_test *list, const char *function_name,
 		{
 			free_list(list);
 		}
+		setup_pipe(list, current, pipe_fd);
 		pid = fork();
 		if (pid == 0)
 			child_process(current, list, pipe_fd);
