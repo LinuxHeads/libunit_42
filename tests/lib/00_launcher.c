@@ -6,7 +6,7 @@
 /*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 20:31:27 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/19 10:13:04 by abdsalah         ###   ########.fr       */
+/*   Updated: 2025/07/19 10:39:27 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	launcher_lib(void)
 {
 	t_unit_test	*test_list;
-
+	
 	test_list = NULL;
 	load_test(&test_list, "LIBUNIT", "normal OK test", &test_success);
 	load_test(&test_list, "LIBUNIT", "failing test", &test_fail);
@@ -27,7 +27,5 @@ int	launcher_lib(void)
 	load_test(&test_list, "LIBUNIT", "abrt test", &test_sigabrt);
 	load_test(&test_list, "LIBUNIT", "ill test", &test_sigill);
 	load_test(&test_list, "LIBUNIT", "pipe test", &test_sigpipe);
-	launch_tests(test_list);
-	free_list(test_list);
-	return (0);
+	return (launch_tests(test_list));
 }

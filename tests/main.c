@@ -6,7 +6,7 @@
 /*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 20:29:51 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/17 21:24:00 by abdsalah         ###   ########.fr       */
+/*   Updated: 2025/07/19 10:28:55 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 int	main(void)
 {
+	
 	launcher_lib();
 	return (0);
 }

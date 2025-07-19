@@ -6,7 +6,7 @@
 /*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 19:02:26 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/19 10:17:37 by abdsalah         ###   ########.fr       */
+/*   Updated: 2025/07/19 10:38:12 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ void	child_process(t_unit_test *test_node, t_unit_test *list)
 	}
 	alarm(TIMEOUT);
 	ret = test_node->f();
-	free_list(list);
 	exit(ret);
 }
 
@@ -110,6 +109,7 @@ int	launch_tests(t_unit_test *list)
 	}
 	ft_printf(WHT "Total tests: %d," GRN " Success: %d" WHT "," RED " Failures: \
 %d\n", total_tests, success_count, total_tests - success_count);
+	free_list(list);
 	if (success_count == total_tests)
 		return (0);
 	return (-1);
