@@ -1,26 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   project_tests.h                                    :+:      :+:    :+:   */
+/*   01_identical_string_test.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malsharq <malsharq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/19 11:55:02 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/19 16:40:25 by malsharq         ###   ########.fr       */
+/*   Created: 2025/07/19 15:56:16 by malsharq          #+#    #+#             */
+/*   Updated: 2025/07/19 16:00:21 by malsharq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PROJECT_TESTS_h
-# define PROJECT_TESTS_h
+#include "ft_strcmp.h"
 
-# include "ctype.h"
-#include "string.h"
-# include "ft_isdigit/ft_isdigit.h"
-# include "ft_split/ft_split.h"
-# include "ft_isalpha/ft_isalpha.h"
-# include "ft_strcmp/ft_strcmp.h"
-# include "ft_atoi/ft_atoi.h"
-# include "../libft/includes/libft.h"
-# include "../framework/include/libunit.h"
-
-#endif
+int identical_string(void)
+{
+    if (ft_strcmp("hello world", "hello world") == 0)
+        return (0);
+    else
+        return (1);
+}

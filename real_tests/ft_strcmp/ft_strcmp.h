@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   project_tests.h                                    :+:      :+:    :+:   */
+/*   ft_strcmp.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malsharq <malsharq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/19 11:55:02 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/19 16:40:25 by malsharq         ###   ########.fr       */
+/*   Created: 2025/07/19 15:45:24 by malsharq          #+#    #+#             */
+/*   Updated: 2025/07/19 16:15:31 by malsharq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PROJECT_TESTS_h
-# define PROJECT_TESTS_h
+#ifndef FT_STRCMP_H
+#define FT_STRCMP_H
 
-# include "ctype.h"
-#include "string.h"
-# include "ft_isdigit/ft_isdigit.h"
-# include "ft_split/ft_split.h"
-# include "ft_isalpha/ft_isalpha.h"
-# include "ft_strcmp/ft_strcmp.h"
-# include "ft_atoi/ft_atoi.h"
-# include "../libft/includes/libft.h"
-# include "../framework/include/libunit.h"
+#include "../project_tests.h"
+int identical_string(void);
+int ft_strcmp_empty_string(void);
+int non_equal_strings(void);
+int non_equal_strings_2(void);
+int ft_strcmp_launcher(void);
 
 #endif

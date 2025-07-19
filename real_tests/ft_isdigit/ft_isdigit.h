@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   project_tests.h                                    :+:      :+:    :+:   */
+/*   ft_isdigit.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: malsharq <malsharq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/19 11:55:02 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/19 16:40:25 by malsharq         ###   ########.fr       */
+/*   Created: 2025/07/19 13:42:01 by malsharq          #+#    #+#             */
+/*   Updated: 2025/07/19 14:28:12 by malsharq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PROJECT_TESTS_h
-# define PROJECT_TESTS_h
+#ifndef FT_IS_DIGIT_H
+#define FT_IS_DIGIT_H
 
-# include "ctype.h"
-#include "string.h"
-# include "ft_isdigit/ft_isdigit.h"
-# include "ft_split/ft_split.h"
-# include "ft_isalpha/ft_isalpha.h"
-# include "ft_strcmp/ft_strcmp.h"
-# include "ft_atoi/ft_atoi.h"
-# include "../libft/includes/libft.h"
-# include "../framework/include/libunit.h"
+#include "../project_tests.h"
+int ft_isdigit_launcher(void);
+int char_test(void);
+int null_test(void);
+int digit_test(void);
+int special_char_test(void);
 
 #endif
