@@ -6,7 +6,7 @@
 /*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 20:29:51 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/19 13:50:38 by abdsalah         ###   ########.fr       */
+/*   Updated: 2025/07/19 13:57:47 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,11 @@ static int ft_lstfind(t_list *list, char *target)
 
 int	main(int ac, char **av)
 {
-	int	flag;
-	t_list *skip_list;
 	int		i;
-
+	int		flag;
+	char	*test_name;
+	t_list	*skip_list;
+	
 	i = 0;
 	flag = 0;
 	skip_list = NULL;
@@ -46,7 +47,14 @@ int	main(int ac, char **av)
 		i = 2;
 		while (i < ac)
 		{
-			ft_lstadd_back(&skip_list, ft_lstnew(ft_strdup(av[i])));
+			test_name = ft_strdup(av[i]);
+			if (!test_name)
+			{
+				ft_lstclear(&skip_list, free);
+				ft_printf("malloc failed :(.\n");
+				exit(1);
+			}
+			ft_lstadd_back(&skip_list, ft_lstnew(test_name));
 			i++;
 		}
 	}
