@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
+/*   By: malsharq <malsharq@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 20:29:51 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/19 13:57:47 by abdsalah         ###   ########.fr       */
+/*   Updated: 2025/07/19 16:39:22 by malsharq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "project_tests.h"
-
+// int ft_isalnum_launcher(void);
 static int ft_lstfind(t_list *list, char *target)
 {
 	t_list *cur;
@@ -64,8 +64,16 @@ int	main(int ac, char **av)
 		ft_lstclear(&skip_list, free);
 		exit(1);
 	}
-	if (!ft_lstfind(skip_list, "libunit"))
-		launcher_lib();
+	if (!ft_lstfind(skip_list, "ft_isdigit"))
+		ft_isdigit_launcher();
+	if (!ft_lstfind(skip_list, "ft_isalpha"))
+		ft_isalpha_launcher();
+	if (!ft_lstfind(skip_list, "ft_split"))
+		ft_split_launcher();
+	if (!ft_lstfind(skip_list, "ft_strcmp"))
+		ft_strcmp_launcher();
+	if (!ft_lstfind(skip_list, "ft_atoi"))
+		ft_atoi_launcher();
 	if (flag)
 	{
 		ft_lstclear(&skip_list, free);
