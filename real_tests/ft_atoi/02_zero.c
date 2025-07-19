@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   02_zero.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malsharq <malsharq@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 16:36:41 by malsharq          #+#    #+#             */
-/*   Updated: 2025/07/19 16:36:58 by malsharq         ###   ########.fr       */
+/*   Updated: 2025/07/19 16:51:17 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_atoi.h"
 
-int zero_test(void)
+int	zero_test(void)
 {
-    if (ft_atoi("0") == 0)
-        return (0);
-    else
-        return (1);
+	if (ft_atoi("0") == 0)
+		return (0);
+	else
+		return (1);
 }

@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   04_max_int.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malsharq <malsharq@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 16:38:03 by malsharq          #+#    #+#             */
-/*   Updated: 2025/07/19 16:38:31 by malsharq         ###   ########.fr       */
+/*   Updated: 2025/07/19 16:51:12 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_atoi.h"
 
-int max_int_test(void)
+int	max_int_test(void)
 {
-    if (ft_atoi("-2147483648") == -2147483648)
-        return (0);
-    else
-        return (1);
+	if (ft_atoi("-2147483648") == -2147483648)
+		return (0);
+	else
+		return (1);
 }

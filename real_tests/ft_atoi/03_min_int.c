@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   03_min_int.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malsharq <malsharq@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 16:37:08 by malsharq          #+#    #+#             */
-/*   Updated: 2025/07/19 16:38:26 by malsharq         ###   ########.fr       */
+/*   Updated: 2025/07/19 16:51:14 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_atoi.h"
 
-int min_int_test(void)
+int	min_int_test(void)
 {
-    if (ft_atoi("2147483647") == 2147483647)
-        return (0);
-    else
-        return (1);
+	if (ft_atoi("2147483647") == 2147483647)
+		return (0);
+	else
+		return (1);
 }

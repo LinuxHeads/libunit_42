@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   01_char_test.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malsharq <malsharq@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 13:48:02 by malsharq          #+#    #+#             */
-/*   Updated: 2025/07/19 14:00:42 by malsharq         ###   ########.fr       */
+/*   Updated: 2025/07/19 16:53:11 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_isdigit.h"
 
-int char_test(void)
+int	char_test(void)
 {
-    if(ft_isdigit('g') == isdigit('g'))
-        return (0);
-    else
-        return (1);
+	if (ft_isdigit('g') == isdigit('g'))
+		return (0);
+	else
+		return (1);
 }

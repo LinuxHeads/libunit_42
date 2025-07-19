@@ -3,22 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malsharq <malsharq@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 20:29:51 by abdsalah          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2025/07/19 16:39:22 by malsharq         ###   ########.fr       */
-=======
-/*   Updated: 2025/07/19 15:54:36 by abdsalah         ###   ########.fr       */
->>>>>>> refs/remotes/origin/main
+/*   Updated: 2025/07/19 17:19:03 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "project_tests.h"
-// int ft_isalnum_launcher(void);
-static int ft_lstfind(t_list *list, char *target)
+
+static int	ft_lstfind(t_list *list, char *target)
 {
-	t_list *cur;
+	t_list	*cur;
 
 	if (!list)
 	{
@@ -40,7 +36,7 @@ int	main(int ac, char **av)
 	int		flag;
 	char	*test_name;
 	t_list	*skip_list;
-	
+
 	i = 0;
 	flag = 0;
 	skip_list = NULL;
@@ -64,7 +60,8 @@ int	main(int ac, char **av)
 	}
 	else if (flag)
 	{
-		ft_printf("Invalid option: %s\nUsage: ./lib_tests [-s] [tests to skip]...\n", av[1]);
+		ft_printf("Invalid option: \
+%s\nUsage: ./lib_tests [-s] [tests to skip]...\n", av[1]);
 		ft_lstclear(&skip_list, free);
 		exit(1);
 	}

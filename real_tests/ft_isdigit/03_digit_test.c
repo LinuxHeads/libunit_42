@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   03_digit_test.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malsharq <malsharq@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 13:54:08 by malsharq          #+#    #+#             */
-/*   Updated: 2025/07/19 13:55:11 by malsharq         ###   ########.fr       */
+/*   Updated: 2025/07/19 16:53:14 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_isdigit.h"
 
-int digit_test(void)
+int	digit_test(void)
 {
-    if(ft_isdigit('6') == isdigit('6'))
-        return (1);
-    else
-        return (0);
+	if (ft_isdigit('6') == isdigit('6'))
+		return (1);
+	else
+		return (0);
 }

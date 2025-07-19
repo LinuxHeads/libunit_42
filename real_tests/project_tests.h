@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   project_tests.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malsharq <malsharq@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 11:55:02 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/19 16:40:25 by malsharq         ###   ########.fr       */
+/*   Updated: 2025/07/19 17:18:22 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PROJECT_TESTS_h
-# define PROJECT_TESTS_h
+#ifndef PROJECT_TESTS_H
+# define PROJECT_TESTS_H
 
 # include "ctype.h"
-#include "string.h"
+# include "string.h"
 # include "ft_isdigit/ft_isdigit.h"
 # include "ft_split/ft_split.h"
 # include "ft_isalpha/ft_isalpha.h"

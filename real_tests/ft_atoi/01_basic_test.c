@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   01_basic_test.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malsharq <malsharq@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 16:35:40 by malsharq          #+#    #+#             */
-/*   Updated: 2025/07/19 16:38:46 by malsharq         ###   ########.fr       */
+/*   Updated: 2025/07/19 16:51:15 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_atoi.h"
 
-int ft_atoi_basic_test(void)
+int	ft_atoi_basic_test(void)
 {
-    if (ft_atoi("78") == 78)
-        return (0);
-    else
-        return (1);
+	if (ft_atoi("78") == 78)
+		return (0);
+	else
+		return (1);
 }

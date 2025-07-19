@@ -6,7 +6,7 @@
 /*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 20:31:27 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/19 15:54:01 by abdsalah         ###   ########.fr       */
+/*   Updated: 2025/07/19 17:13:46 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int	launcher_lib(void)
 {
 	t_unit_test	*test_list;
-	
+
 	test_list = NULL;
 	load_test(&test_list, "normal OK test", &test_success, 1);
 	load_test(&test_list, "failing test", &test_fail, 1);

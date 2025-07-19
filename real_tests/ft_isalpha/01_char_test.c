@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   01_char_test.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malsharq <malsharq@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 13:48:02 by malsharq          #+#    #+#             */
-/*   Updated: 2025/07/19 15:12:26 by malsharq         ###   ########.fr       */
+/*   Updated: 2025/07/19 16:51:52 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_isalpha.h"
 
-int isalpha_char_test(void)
+int	isalpha_char_test(void)
 {
-    if(ft_isalpha('D') != 0)
-        return (0);
-    else
-        return (1);
+	if (ft_isalpha('D') != 0)
+		return (0);
+	else
+		return (1);
 }

@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   02_null_test.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: malsharq <malsharq@student.42.fr>          +#+  +:+       +#+        */
+/*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 13:53:18 by malsharq          #+#    #+#             */
-/*   Updated: 2025/07/19 14:21:57 by malsharq         ###   ########.fr       */
+/*   Updated: 2025/07/19 16:53:12 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_isdigit.h"
 
-int null_test(void)
+int	null_test(void)
 {
-    if(ft_isdigit('\0') == isdigit('\0'))
-        return (0);
-    else
-        return (1);
+	if (ft_isdigit('\0') == isdigit('\0'))
+		return (0);
+	else
+		return (1);
 }

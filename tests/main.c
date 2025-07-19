@@ -6,15 +6,15 @@
 /*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/17 20:29:51 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/19 13:59:36 by abdsalah         ###   ########.fr       */
+/*   Updated: 2025/07/19 17:14:28 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "lib_tests.h"
 
-static int ft_lstfind(t_list *list, char *target)
+static inline int	ft_lstfind(t_list *list, char *target)
 {
-	t_list *cur;
+	t_list	*cur;
 
 	if (!list)
 	{
@@ -36,7 +36,7 @@ int	main(int ac, char **av)
 	int		flag;
 	char	*test_name;
 	t_list	*skip_list;
-	
+
 	i = 0;
 	flag = 0;
 	skip_list = NULL;
@@ -60,11 +60,11 @@ int	main(int ac, char **av)
 	}
 	else if (flag)
 	{
-		ft_printf("Invalid option: %s\nUsage: ./lib_tests [-s] [tests to skip]...\n", av[1]);
+		ft_printf("Invalid option: \
+%s\nUsage: ./lib_tests [-s] [tests to skip]...\n", av[1]);
 		ft_lstclear(&skip_list, free);
 		exit(1);
 	}
-	//add tests here
 	if (!ft_lstfind(skip_list, "libunit"))
 		launcher_lib();
 	if (flag)
