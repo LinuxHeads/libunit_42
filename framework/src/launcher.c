@@ -6,7 +6,7 @@
 /*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 19:02:26 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/18 20:33:29 by abdsalah         ###   ########.fr       */
+/*   Updated: 2025/07/19 10:17:37 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 void	child_process(t_unit_test *test_node, t_unit_test *list)
 {
 	int	devnull;
-	int ret;
-	
+	int	ret;
+
 	if (!test_node || !test_node->f)
 	{
 		ft_printf("Invalid test function.\n");
@@ -78,7 +78,8 @@ void	parent_process(t_unit_test *list, int *success_count)
 	}
 	if (WIFEXITED(status) && WEXITSTATUS(status) == 0)
 		(*success_count)++;
-	ft_printf(WHT "%s: %s: %s\n", list->function_name, list->test_name, status_str);
+	ft_printf(WHT "%s: %s: %s\n", list->function_name, list->test_name,
+		status_str);
 	free(status_str);
 }
 

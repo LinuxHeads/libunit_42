@@ -6,7 +6,7 @@
 /*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 19:53:11 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/18 20:04:24 by abdsalah         ###   ########.fr       */
+/*   Updated: 2025/07/19 10:15:36 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,10 @@
 
 int	test_sigabrt(void)
 {
-	abort();
+	char	*s;
+
+	s = malloc(1);
+	free(s);
+	free(s);
 	return (0);
 }

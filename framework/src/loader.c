@@ -23,7 +23,8 @@ static t_unit_test	*add_node(t_unit_test **test_list, const char *test_name,
 	{
 		return (NULL);
 	}
-	*new_node = (t_unit_test){.function_name = function_name ,.test_name = test_name, .f = f, .next = NULL};
+	*new_node = (t_unit_test){.function_name = function_name,
+		.test_name = test_name, .f = f, .next = NULL};
 	if (!test_list || !*test_list)
 	{
 		*test_list = new_node;
@@ -58,8 +59,7 @@ void	free_list(t_unit_test *list)
 }
 
 void	load_test(t_unit_test **test_list, const char *function_name,
-		const char *test_name,
-		int (*f)(void))
+		const char *test_name, int (*f)(void))
 {
 	if (add_node(test_list, test_name, function_name, f) == NULL)
 	{
