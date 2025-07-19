@@ -1,19 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   08_sigill.c                                        :+:      :+:    :+:   */
+/*   01_success.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/18 19:53:40 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/19 21:27:14 by abdsalah         ###   ########.fr       */
+/*   Created: 2025/07/17 20:34:18 by abdsalah          #+#    #+#             */
+/*   Updated: 2025/07/18 19:59:01 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../lib_tests_bonus.h"
+#include "../lib_tests.h"
 
-int	test_sigill(void)
+int	test_success(void)
 {
-	asm volatile ("ud2");
-	return (0);
+	if (ft_isdigit('1'))
+		return (0);
+	else
+		return (-1);
 }

@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   05_timeout.c                                       :+:      :+:    :+:   */
+/*   10_output.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/18 19:34:11 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/19 21:27:30 by abdsalah         ###   ########.fr       */
+/*   Created: 2025/07/19 21:26:57 by abdsalah          #+#    #+#             */
+/*   Updated: 2025/07/19 22:13:15 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../lib_tests_bonus.h"
+#include "../lib_tests.h"
 
-int	test_timeout(void)
+int	test_printf(void)
 {
-	while (1)
-	{
-	}
-	return (0);
+	if (ft_printf("123"))
+		return (0);
+	else
+		return (-1);
 }

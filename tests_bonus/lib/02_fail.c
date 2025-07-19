@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   09_sigpipe.c                                       :+:      :+:    :+:   */
+/*   02_fail.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/18 19:54:48 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/19 21:27:07 by abdsalah         ###   ########.fr       */
+/*   Created: 2025/07/17 20:46:46 by abdsalah          #+#    #+#             */
+/*   Updated: 2025/07/18 19:59:14 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../lib_tests_bonus.h"
+#include "../lib_tests.h"
 
-int	test_sigpipe(void)
+int	test_fail(void)
 {
-	int	pipe_fd[2];
-
-	if (pipe(pipe_fd) == -1)
+	if (ft_isdigit('a'))
+		return (0);
+	else
 		return (-1);
-	close(pipe_fd[0]);
-	write(pipe_fd[1], "Hello", 5);
-	close(pipe_fd[1]);
-	return (0);
 }

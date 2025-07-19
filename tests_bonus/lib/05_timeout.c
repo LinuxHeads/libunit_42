@@ -1,19 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   07_sigabrt.c                                       :+:      :+:    :+:   */
+/*   05_timeout.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/18 19:53:11 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/19 21:27:18 by abdsalah         ###   ########.fr       */
+/*   Created: 2025/07/18 19:34:11 by abdsalah          #+#    #+#             */
+/*   Updated: 2025/07/19 22:12:52 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../lib_tests_bonus.h"
+#include "../lib_tests.h"
 
-int	test_sigabrt(void)
+int	test_timeout(void)
 {
-	abort();
+	while (1)
+	{
+	}
 	return (0);
 }

@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   06_sigfpe.c                                        :+:      :+:    :+:   */
+/*   03_sigsev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/18 19:35:41 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/19 21:27:25 by abdsalah         ###   ########.fr       */
+/*   Created: 2025/07/17 20:48:03 by abdsalah          #+#    #+#             */
+/*   Updated: 2025/07/18 00:38:49 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../lib_tests_bonus.h"
+#include "../lib_tests.h"
 
-int	test_sigfpe(void)
+int	test_segfault(void)
 {
-	int	a;
-	int	b;
-	int	result;
+	char	*ptr;
 
-	a = 1;
-	b = 0;
-	result = a / b;
-	(void)result;
+	ptr = NULL;
+	*ptr = 'a';
 	return (0);
 }
