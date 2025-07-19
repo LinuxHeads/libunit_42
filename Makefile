@@ -7,7 +7,6 @@ TESTS_DIR = 	tests
 TESTS_BONUS_DIR = 	tests_bonus
 REALTESTS_DIR =	real_tests
 
-
 all: libft libunit lib_test real_test
 
 libft:
@@ -42,6 +41,8 @@ fclean: clean
 	@$(MAKE) fclean -C $(TESTS_DIR)
 	@$(MAKE) fclean -C $(REALTESTS_DIR)
 
+re: fclean all
+
 bonus: libft libunit_bonus lib_test_bonus real_test
 
 libunit_bonus:
@@ -53,7 +54,7 @@ lib_test_bonus:
 run_lib_test_bonus:
 	@$(MAKE) test -C $(TESTS_BONUS_DIR) SKIP="$(SKIP)"
 
-bonus_test:real_test_bonus lib_test_bonus run_lib_test_bonus run_real_test
+bonus_test: real_test_bonus lib_test_bonus run_lib_test_bonus run_real_test
 
 clean_bonus:
 	@$(MAKE) clean -C $(LIBFT_DIR)
@@ -70,4 +71,4 @@ fclean_bonus: clean_bonus
 
 re_bonus: fclean_bonus bonus
 
-.PHONY: all clean fclean re libft libunit test real_test run_real_test run_lib_test lib_test libunit_bonus lib_test_bonus real_test_bonus run_real_test_bonus run_lib_test_bonus clean_bonus bonus_test fclean_bonus re_bonus
+.PHONY: all clean fclean re libft libunit test real_test run_real_test run_lib_test lib_test libunit_bonus lib_test_bonus real_test_bonus run_lib_test_bonus clean_bonus bonus_test fclean_bonus re_bonus

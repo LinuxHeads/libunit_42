@@ -6,7 +6,7 @@
 /*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 19:12:00 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/19 22:53:15 by abdsalah         ###   ########.fr       */
+/*   Updated: 2025/07/19 22:58:11 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ void	parent_process(t_unit_test *current, int *success_count,
 	}
 	if (WIFEXITED(status) && WEXITSTATUS(status) == 0)
 	{
-		if (check_output)
+		if (check_output(current, pipe_fd, success_count))
 		{
 			free(status_str);
 			status_str = ft_strdup(RED "KO");
