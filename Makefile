@@ -28,7 +28,7 @@ run_real_test:
 run_lib_test:
 	@$(MAKE) test -C $(TESTS_DIR) SKIP="$(SKIP)"
 
-test: run_lib_test run_real_test
+test:real_test lib_test run_lib_test run_real_test
 
 clean:
 	@$(MAKE) clean -C $(LIBFT_DIR)
