@@ -6,7 +6,7 @@
 /*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 19:02:26 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/19 11:34:19 by abdsalah         ###   ########.fr       */
+/*   Updated: 2025/07/19 15:47:11 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ static char	*get_status(int status)
 	return (ft_strdup(RED "Unknown status"));
 }
 
-void	parent_process(t_unit_test *list, int *success_count)
+void	parent_process(t_unit_test *list, int *success_count, const char *function_name)
 {
 	int		status;
 	char	*status_str;
@@ -78,12 +78,13 @@ void	parent_process(t_unit_test *list, int *success_count)
 	}
 	if (WIFEXITED(status) && WEXITSTATUS(status) == 0)
 		(*success_count)++;
-	ft_printf(WHT "%s: %s: %s\n", list->function_name, list->test_name,
+	if (list->verbose)
+		ft_printf(WHT "%s: %s: %s\n", function_name, list->test_name,
 		status_str);
 	free(status_str);
 }
 
-int	launch_tests(t_unit_test *list)
+int	launch_tests(t_unit_test *list, const char *function_name)
 {
 	pid_t		pid;
 	int			total_tests;
@@ -104,7 +105,7 @@ int	launch_tests(t_unit_test *list)
 		if (pid == 0)
 			child_process(current, list);
 		else
-			parent_process(current, &success_count);
+			parent_process(current, &success_count, function_name);
 		current = current->next;
 		total_tests++;
 	}
