@@ -6,7 +6,7 @@
 /*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 19:02:26 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/19 15:47:11 by abdsalah         ###   ########.fr       */
+/*   Updated: 2025/07/19 17:13:05 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,8 @@ static char	*get_status(int status)
 	return (ft_strdup(RED "Unknown status"));
 }
 
-void	parent_process(t_unit_test *list, int *success_count, const char *function_name)
+void	parent_process(t_unit_test *list, int *success_count,
+		const char *function_name)
 {
 	int		status;
 	char	*status_str;
@@ -80,24 +81,18 @@ void	parent_process(t_unit_test *list, int *success_count, const char *function_
 		(*success_count)++;
 	if (list->verbose)
 		ft_printf(WHT "%s: %s: %s\n", function_name, list->test_name,
-		status_str);
+			status_str);
 	free(status_str);
 }
 
-int	launch_tests(t_unit_test *list, const char *function_name)
+static int	exec_tests(t_unit_test *list, const char *function_name,
+		int *total_tests)
 {
-	pid_t		pid;
-	int			total_tests;
 	int			success_count;
+	pid_t		pid;
 	t_unit_test	*current;
 
-	if (!list)
-	{
-		ft_printf("No tests to run.\n");
-		return (0);
-	}
 	current = list;
-	total_tests = 0;
 	success_count = 0;
 	while (current)
 	{
@@ -107,8 +102,23 @@ int	launch_tests(t_unit_test *list, const char *function_name)
 		else
 			parent_process(current, &success_count, function_name);
 		current = current->next;
-		total_tests++;
+		(*total_tests)++;
 	}
+	return (success_count);
+}
+
+int	launch_tests(t_unit_test *list, const char *function_name)
+{
+	int	total_tests;
+	int	success_count;
+
+	if (!list)
+	{
+		ft_printf("No tests to run.\n");
+		return (0);
+	}
+	total_tests = 0;
+	success_count = exec_tests(list, function_name, &total_tests);
 	ft_printf(WHT "Total tests: %d," GRN " Success: %d" WHT "," RED " Failures: \
 %d\n", total_tests, success_count, total_tests - success_count);
 	free_list(list);

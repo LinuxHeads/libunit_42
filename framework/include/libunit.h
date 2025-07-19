@@ -37,5 +37,6 @@ typedef struct s_unit_test
 void					free_list(t_unit_test *list);
 void					load_test(t_unit_test **test_list,
 							const char *test_name, int (*f)(void), int verbose);
-int						launch_tests(t_unit_test *list, const char *function_name);
+int						launch_tests(t_unit_test *list,
+							const char *function_name);
 #endif
