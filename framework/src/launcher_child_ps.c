@@ -6,7 +6,7 @@
 /*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/19 19:11:10 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/19 20:07:48 by abdsalah         ###   ########.fr       */
+/*   Updated: 2025/07/19 20:44:14 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 void	child_process(t_unit_test *test_node, t_unit_test *list)
 {
-	int	devnull;
 	int	ret;
 
 	if (!test_node || !test_node->f)
