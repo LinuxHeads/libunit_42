@@ -6,13 +6,13 @@
 /*   By: abdsalah <abdsalah@student.42amman.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/18 19:02:26 by abdsalah          #+#    #+#             */
-/*   Updated: 2025/07/19 10:38:12 by abdsalah         ###   ########.fr       */
+/*   Updated: 2025/07/19 11:27:54 by abdsalah         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/libunit.h"
 
-void	child_process(t_unit_test *test_node, t_unit_test *list)
+static void	child_process(t_unit_test *test_node)
 {
 	int	devnull;
 	int	ret;
@@ -34,7 +34,7 @@ void	child_process(t_unit_test *test_node, t_unit_test *list)
 	exit(ret);
 }
 
-char	*get_status(int status)
+static char	*get_status(int status)
 {
 	if (WIFSIGNALED(status))
 	{
@@ -101,7 +101,7 @@ int	launch_tests(t_unit_test *list)
 	{
 		pid = fork();
 		if (pid == 0)
-			child_process(current, list);
+			child_process(current);
 		else
 			parent_process(current, &success_count);
 		current = current->next;
